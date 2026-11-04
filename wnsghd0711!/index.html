@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>박준홍 | Fintech & AI 데이터 분석가 포트폴리오</title>
+  
+  <!-- SEO & Social Meta Tags -->
+  <meta name="description" content="한림대학교 경영학과·금융재무학과 박준홍의 포트폴리오. 생성형 AI 멀티에이전트 워크플로우와 금융 도메인 데이터 분석을 융합한 개인 웹사이트입니다.">
+  <meta name="keywords" content="박준홍, 한림대학교, 경영학과, 금융재무학과, AI스마트워크, 핀테크, 데이터분석, Claude, Gemini, Veo, 포트폴리오">
+  <meta name="author" content="Junhong Park">
+
+  <!-- OpenGraph Meta Tags (카카오톡, 링크드인, 페이스북 공유 시 썸네일) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="박준홍 | Fintech & AI 데이터 분석가 포트폴리오">
+  <meta property="og:description" content="금융 도메인 지식과 첨단 AI 기술을 잇는 분석가 박준홍의 포트폴리오 웹사이트입니다.">
+  <meta property="og:image" content="assets/images/semiconductor-cover.png">
+
+  <!-- Web Fonts (Pretendard & Google Fonts) -->
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       Site Header & Sticky Navigation
+       ========================================================================== -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="#hero" class="logo-brand">
+        <span class="name">박준홍</span>
+        <span class="role">Fintech & AI Analyst</span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#education" class="nav-link">Education</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#skills" class="nav-link">Skills & Certs</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="themeToggleBtn" class="theme-toggle-btn" aria-label="테마 전환" title="다크 모드로 전환">
+          <span id="themeIcon">🌙</span>
+        </button>
+        <button id="hamburgerBtn" class="hamburger-btn" aria-label="메뉴 열기">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       Hero Section
+       ========================================================================== -->
+  <section id="hero" class="hero-section">
+    <div class="hero-glow-bg"></div>
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="hero-badge-group">
+          <span class="hero-badge highlight">🎓 한림대학교 경영학 & 금융재무학</span>
+          <span class="hero-badge gold">⚡ AI 스마트워크 & 데이터 분석</span>
+        </div>
+
+        <h1 class="hero-title">
+          금융 도메인 지식과<br>
+          첨단 AI를 잇는 분석가,<br>
+          <span class="gradient-text">박준홍</span>입니다.
+        </h1>
+
+        <p class="hero-description">
+          기업 가치평가 및 반도체 산업 사이클 분석부터 생성형 AI 다중 에이전트(Multi-Agent QA)와 
+          슬라이드 자동화 스킬 개발까지, 정량적 데이터와 엔지니어링으로 실질적인 비즈니스 솔루션을 구축합니다.
+        </p>
+
+        <div class="hero-cta-group">
+          <a href="#projects" class="btn btn-primary">
+            <span>대표 프로젝트 탐색하기</span>
+            <span>↓</span>
+          </a>
+          <a href="#contact" class="btn btn-secondary">
+            <span>연락처 및 링크</span>
+            <span>✉️</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="profile-card-wrapper">
+          <!-- Floating mini stats -->
+          <div class="floating-stat stat-left">
+            <span class="stat-icon">📈</span>
+            <div class="stat-text">
+              <span class="stat-num">Hallym Inv.</span>
+              <span class="stat-label">반도체 리서치 수석</span>
+            </div>
+          </div>
+
+          <div class="floating-stat stat-right">
+            <span class="stat-icon">🤖</span>
+            <div class="stat-text">
+              <span class="stat-num">Multi-Agent</span>
+              <span class="stat-label">독립 QA 검증 완료</span>
+            </div>
+          </div>
+
+          <div class="profile-card">
+            <div class="profile-img-container">
+              <img src="assets/images/profile.jpg" alt="박준홍 프로필 사진" width="360" height="360">
+              <div class="profile-status">
+                <span class="status-dot"></span>
+                <span>인턴십 & 프로젝트 오픈</span>
+              </div>
+            </div>
+            <div class="profile-info">
+              <h3>박준홍 (Junhong Park)</h3>
+              <p>한림대학교 경영대학 · 학번 20212954</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       About Section
+       ========================================================================== -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">About Me</span>
+        <h2 class="section-title">비즈니스 통찰과 첨단 AI의 시너지</h2>
+        <p class="section-subtitle">
+          숫자 이면의 비즈니스 맥락을 파악하고, 생성형 AI를 통해 복잡한 리서치와 의사결정을 실무 수준의 완성도로 구현합니다.
+        </p>
+      </div>
+
+      <div class="about-grid">
+        <!-- Card 1: 금융 & 재무 분석 -->
+        <div class="about-card card-finance">
+          <div class="about-card-icon">📊</div>
+          <h3 class="about-card-title">금융 & 산업 밸류에이션</h3>
+          <p class="about-card-desc">
+            경영학 및 금융재무학 복수전공을 통해 기업 재무제표 분석, 상대가치평가(PER/PBR), 경기순환주기(메모리 반도체 사이클) 분석 및 확률가중 시나리오 밸류에이션 모델을 수립합니다.
+          </p>
+          <div class="about-card-tags">
+            <span class="tag-pill">PER 역설 분석</span>
+            <span class="tag-pill">시나리오 밸류에이션</span>
+            <span class="tag-pill">재무제표 분석</span>
+          </div>
+        </div>
+
+        <!-- Card 2: AI 스마트워크 & Multi-Agent -->
+        <div class="about-card">
+          <div class="about-card-icon">🧠</div>
+          <h3 class="about-card-title">Multi-Agent QA 시스템</h3>
+          <p class="about-card-desc">
+            단순 프롬프트 입력을 넘어, 작성 에이전트와 독립 검토(QA) 에이전트를 분리 설계하여 수치 출처, 산식 계산 오류, 논리 비약을 스스로 검증하고 바로잡는 AI 품질 관리 루프를 운용합니다.
+          </p>
+          <div class="about-card-tags">
+            <span class="tag-pill">프롬프트 엔지니어링</span>
+            <span class="tag-pill">독립 검토 루프</span>
+            <span class="tag-pill">Fact-Checking</span>
+          </div>
+        </div>
+
+        <!-- Card 3: 자동화 스킬 & 멀티모달 제작 -->
+        <div class="about-card card-multimodal">
+          <div class="about-card-icon">🚀</div>
+          <h3 class="about-card-title">자동화 스크립트 & 멀티모달</h3>
+          <p class="about-card-desc">
+            Antigravity 커스텀 에이전트 스킬 및 Node.js/Python 검증 스크립트를 직접 개발하여 슬라이드 덱을 자동 생성하고, Gemini 3D 이미지와 Veo 8초 시네마틱 홍보 영상을 파이프라인으로 엮어냅니다.
+          </p>
+          <div class="about-card-tags">
+            <span class="tag-pill">Antigravity Skill</span>
+            <span class="tag-pill">Google Veo (영상)</span>
+            <span class="tag-pill">Gemini (이미지)</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="vision-quote-box">
+        <p>“기술은 분석의 속도를 높이고, 도메인 지식은 분석의 깊이를 결정합니다.<br>두 영역의 균형을 통해 신뢰할 수 있는 데이터 결론을 도출합니다.”</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Education Section
+       ========================================================================== -->
+  <section id="education" class="section" style="background: var(--bg-subtle);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Education</span>
+        <h2 class="section-title">학력 및 전공 배경</h2>
+        <p class="section-subtitle">
+          경영학과 금융재무학의 융합을 통해 폭넓은 비즈니스 관점과 정밀한 재무 분석 능력을 함양하고 있습니다.
+        </p>
+      </div>
+
+      <div class="education-card">
+        <div class="education-header">
+          <div class="univ-info">
+            <h3>한림대학교 (Hallym University)</h3>
+            <span class="status">경영대학 학사 재학 중</span>
+          </div>
+          <div class="univ-meta">
+            <div class="period">2021.03 ~ 현재</div>
+            <div class="student-id">학번: 20212954</div>
+          </div>
+        </div>
+
+        <div class="majors-grid">
+          <div class="major-box">
+            <span class="major-badge">제1전공</span>
+            <h4>경영학과 (Business Administration)</h4>
+            <p>
+              기업 경영전략, 관리회계, 마케팅 전략, 데이터 기반 비즈니스 의사결정 체계와 기업 조직 및 시장 환경에 대한 거시적 분석 역량을 구축하였습니다.
+            </p>
+          </div>
+
+          <div class="major-box">
+            <span class="major-badge dual">복수전공</span>
+            <h4>금융재무학과 (Finance)</h4>
+            <p>
+              재무관리, 기업재무론, 증권투자론, 금융 데이터 분석을 심도 있게 학습하며 기업 가치평가 모델링(Valuation)과 자본시장 리서치 역량을 다지고 있습니다.
+            </p>
+          </div>
+        </div>
+
+        <div class="coursework-container">
+          <h5>주요 이수 교과목 및 학술 프로젝트</h5>
+          <div class="coursework-list">
+            <span class="course-item starred">★ AI스마트워크 (중간고사 대표 우수 과제 도출)</span>
+            <span class="course-item">재무관리 & 기업가치평가</span>
+            <span class="course-item">경영통계학 & 계량분석</span>
+            <span class="course-item">증권투자론 & 자산배분</span>
+            <span class="course-item">비즈니스 데이터 애널리틱스</span>
+            <span class="course-item">관리회계 & 재무제표 분석</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Projects Section (Featured Showcase & Scalable Grid)
+       ========================================================================== -->
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Featured Project</span>
+        <h2 class="section-title">대표 프로젝트 쇼케이스</h2>
+        <p class="section-subtitle">
+          AI스마트워크 수업 중간고사에서 기획·분석·검증·제작 전 과정을 단독 수행한 멀티모달 금융 리서치 프로젝트입니다.
+        </p>
+      </div>
+
+      <!-- Featured Project Container -->
+      <div class="featured-project-container">
+        <div class="featured-badge-bar">
+          <div class="featured-label">
+            <span>🏆</span>
+            <span>AI스마트워크 중간고사 대표 우수 과제</span>
+          </div>
+          <div class="featured-period">2026.10 · 개인 단독 진행 (기여도 100%)</div>
+        </div>
+
+        <div class="featured-main-grid">
+          <!-- Left: Media Showcase (Video & Image) -->
+          <div class="featured-media-col">
+            <div class="video-player-wrapper">
+              <div class="video-overlay-badge">
+                <span>🎬</span>
+                <span>Google Veo 8초 시네마틱 티저 영상</span>
+              </div>
+              <video id="teaserVideo" playsinline loop muted autoplay>
+                <source src="assets/videos/semiconductor-teaser.mp4" type="video/mp4">
+                브라우저가 비디오 재생을 지원하지 않습니다.
+              </video>
+            </div>
+
+            <div class="video-controls-bar">
+              <span class="video-caption">📌 Gemini 표지 프레임을 기반으로 Google Veo(Flow) 모델로 자동 생성된 16:9 영상</span>
+              <button id="toggleVideoBtn" class="video-btn">⏸ 일시정지</button>
+            </div>
+
+            <div class="cover-thumbnail-box" onclick="openProjectModal('semiconductor-supercycle')" title="클릭하여 보고서 표지 및 상세 보기">
+              <img src="assets/images/semiconductor-cover.png" alt="반도체 투자 보고서 표지 3D 렌더링">
+              <div class="cover-overlay-text">
+                <span>Google Gemini 3D 렌더링 표지 이미지</span>
+                <span>🔍 확대 및 상세 보기</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Info & Description -->
+          <div class="featured-info-col">
+            <h3>「이번엔 다를까? — 2018년 슈퍼사이클과 비교한 메모리 반도체 투자 전망」</h3>
+            <div class="featured-subtitle">사상 최대 이익, PER 4배의 역설을 분석한 AI 멀티에이전트 금융 리서치</div>
+
+            <p class="featured-desc">
+              삼성전자와 SK하이닉스가 AI 메모리 수요로 분기 사상 최대 실적을 경신 중이나, 2027년 예상 이익 기준 PER은 3~4배에 머물러 시장이 사이클 고점을 의심하는 현상을 분석했습니다.
+              <strong>작성 에이전트와 독립 검토(QA) 에이전트를 가동</strong>하여 26건의 오류를 팩트체크하고, 
+              자체 개발한 <code>hallym-investment-deck</code> 스킬로 덱 자동화까지 완성한 엔드투엔드 프로젝트입니다.
+            </p>
+
+            <div class="featured-tools-tags">
+              <span class="tool-tag">🤖 Claude Opus 5.5</span>
+              <span class="tool-tag">🎨 Google Gemini</span>
+              <span class="tool-tag">🎥 Google Veo (Flow)</span>
+              <span class="tool-tag">🛠 Antigravity Agent Skill</span>
+              <span class="tool-tag">🐍 Python & Node.js</span>
+              <span class="tool-tag">📈 밸류에이션 모델링</span>
+            </div>
+
+            <div class="featured-actions">
+              <button class="btn btn-primary" onclick="openProjectModal('semiconductor-supercycle')">
+                <span>프로젝트 심층 분석 & QA 검증 내역 보기</span>
+                <span>✨</span>
+              </button>
+              <a href="assets/docs/hallym-investment-report.docx" download class="btn btn-secondary" title="A4 10쪽 보고서 파일 다운로드">
+                <span>보고서 (.docx)</span>
+                <span>⬇️</span>
+              </a>
+              <a href="assets/docs/hallym-investment-deck.pptx" download class="btn btn-secondary" title="자동 생성 슬라이드 파일 다운로드">
+                <span>슬라이드 (.pptx)</span>
+                <span>⬇️</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4-Step Pipeline -->
+        <div class="workflow-pipeline">
+          <div class="pipeline-title">
+            <span>⚙️</span>
+            <span>엔드투엔드 4단계 AI 엔지니어링 워크플로우</span>
+          </div>
+          <div class="pipeline-steps-grid">
+            <div class="pipeline-step-card">
+              <span class="step-num">STEP 01</span>
+              <div class="step-heading">산업 리서치 & 밸류에이션</div>
+              <div class="step-body">2018 vs 2026 구조 비교(8대 항목), HBM 웨이퍼 잠식 효과 및 장기계약 규명, 확률가중 시나리오 목표주가 산출 (A4 10쪽 docx)</div>
+            </div>
+
+            <div class="pipeline-step-card">
+              <span class="step-num">STEP 02</span>
+              <div class="step-heading">독립 검토 Multi-Agent QA</div>
+              <div class="step-body">작성자와 분리된 QA 에이전트 구동으로 사실 검증, 26건의 피드백 반영, 2019년 스트레스 테스트(-78%, -53%) 추가</div>
+            </div>
+
+            <div class="pipeline-step-card">
+              <span class="step-num">STEP 03</span>
+              <div class="step-heading">슬라이드 자동화 스킬 개발</div>
+              <div class="step-body">Antigravity 커스텀 스킬(hallym-investment-deck)과 Node.js(hallym_deck.js), Python(qa_check.py) 스크립트로 PPTX 자동 생성</div>
+            </div>
+
+            <div class="pipeline-step-card">
+              <span class="step-num">STEP 04</span>
+              <div class="step-heading">멀티모달 시네마틱 미디어</div>
+              <div class="step-body">Gemini 기반 3D 표지 이미지 생성 및 Google Veo 모델을 활용한 16:9 비율 8초 시네마틱 홍보 티저 영상(MP4) 제작</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Additional Scalable Projects Section -->
+      <div style="margin-top: 2rem;">
+        <h3 style="font-family: var(--font-heading); font-size: 1.4rem; color: var(--text-primary); margin-bottom: 1.25rem;">
+          📚 추가 분석 및 연구 프로젝트 (projects.js 연동 확장 영역)
+        </h3>
+        <div id="additionalProjectsContainer" class="additional-projects-grid">
+          <!-- Rendered dynamically via js/main.js and js/data/projects.js -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Skills & Certificates Section
+       ========================================================================== -->
+  <section id="skills" class="section" style="background: var(--bg-subtle);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Capabilities</span>
+        <h2 class="section-title">보유 역량 및 자격증 현황</h2>
+        <p class="section-subtitle">
+          AI 스마트워크, 데이터 분석, 금융 도메인 3대 축을 균형 있게 구축하고 있습니다.
+        </p>
+      </div>
+
+      <!-- 3-Column Skills Grid -->
+      <div class="skills-grid">
+        <!-- AI & Smart Work -->
+        <div class="skill-category-card">
+          <div class="skill-cat-header">
+            <span style="font-size: 1.5rem;">🤖</span>
+            <h4>AI & Smart Work</h4>
+          </div>
+          <div class="skill-items-list">
+            <div class="skill-item">
+              <div class="skill-name-row">
+                <span class="skill-name">Multi-Agent QA System</span>
+                <span style="font-size: 0.75rem; color: var(--accent-cyan); font-weight: 700;">고급</span>
+              </div>
+              <span class="skill-desc">작성 에이전트와 독립 검토(QA) 에이전트를 분리한 팩트체크 파이프라인 설계</span>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-name-row">
+                <span class="skill-name">Advanced Prompt Engineering</span>
+                <span style="font-size: 0.75rem; color: var(--accent-cyan); font-weight: 700;">고급</span>
+              </div>
+              <span class="skill-desc">&lt;role&gt;, &lt;context&gt;, &lt;valuation_method&gt; 등 제약 조건 중심 구조화 프롬프트</span>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-name-row">
+                <span class="skill-name">Antigravity Custom Skill 개발</span>
+                <span style="font-size: 0.75rem; color: var(--accent-cyan); font-weight: 700;">실무</span>
+              </div>
+              <span class="skill-desc">Node.js/Python 스크립트와 연동한 슬라이드 및 리포트 자동 생성 덱 스킬</span>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-name-row">
+                <span class="skill-name">Multimodal AI Production</span>
+                <span style="font-size: 0.75rem; color: var(--accent-cyan); font-weight: 700;">실무</span>
+              </div>
+              <span class="skill-desc">Gemini 3D 비주얼 생성 및 Google Veo 시네마틱 프레임 비디오 제작</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Data & Analytics -->
+        <div class="skill-category-card">
+          <div class="skill-cat-header">
+            <span style="font-size: 1.5rem;">📈</span>
+            <h4>Data & Analytics</h4>
+          </div>
+          <div class="skill-items-list">
+            <div class="skill-item">
+              <div class="skill-name-row">
+                <span class="skill-name">Python & Pandas</span>
+                <span style="font-size: 0.75rem; color: var(--accent-cyan); font-weight: 700;">중급</span>
+              </div>
+              <span class="skill-desc">데이터 전처리, 결측치 정제, 탐색적 데이터 분석(EDA), NumPy 기초 통계</span>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-name-row">
+                <span class="skill-name">SQL 데이터 추출</span>
+                <span style="font-size: 0.75rem; color: var(--accent-cyan); font-weight: 700;">중급</span>
+              </div>
+              <span class="skill-desc">SELECT 조건문, 다중 JOIN, GROUP BY 집계, 서브쿼리 및 윈도우 함수</span>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-name-row">
+                <span class="skill-name">데이터 시각화 (Visualization)</span>
+                <span style="font-size: 0.75rem; color: var(--accent-cyan); font-weight: 700;">실무</span>
+              </div>
+              <span class="skill-desc">Matplotlib, Seaborn, Excel을 활용한 경영 지표 및 추세 차트 작성</span>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-name-row">
+                <span class="skill-name">통계적 분석 & 시계열 기초</span>
+                <span style="font-size: 0.75rem; color: var(--accent-cyan); font-weight: 700;">기초/중급</span>
+              </div>
+              <span class="skill-desc">회귀분석, 가설검정(p-value), 경기순환 시계열 변동성 해석</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Finance & Business -->
+        <div class="skill-category-card">
+          <div class="skill-cat-header">
+            <span style="font-size: 1.5rem;">💼</span>
+            <h4>Finance & Business</h4>
+          </div>
+          <div class="skill-items-list">
+            <div class="skill-item">
+              <div class="skill-name-row">
+                <span class="skill-name">기업 밸류에이션 모델링</span>
+                <span style="font-size: 0.75rem; color: var(--accent-cyan); font-weight: 700;">실무</span>
+              </div>
+              <span class="skill-desc">상대가치평가(PER/PBR), 경기순환주 P/E 배수 산출, 확률가중 목표주가</span>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-name-row">
+                <span class="skill-name">재무제표 심층 분석</span>
+                <span style="font-size: 0.75rem; color: var(--accent-cyan); font-weight: 700;">실무</span>
+              </div>
+              <span class="skill-desc">손익계산서(IS), 재무상태표(BS), 현금흐름표(CF) 연계 영업이익률/순이익 추정</span>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-name-row">
+                <span class="skill-name">산업 사이클 & 스트레스 테스트</span>
+                <span style="font-size: 0.75rem; color: var(--accent-cyan); font-weight: 700;">실무</span>
+              </div>
+              <span class="skill-desc">2018년 vs 2026년 메모리 반도체 슈퍼사이클 비교 및 다운턴 내성 검증</span>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-name-row">
+                <span class="skill-name">비즈니스 리서치 & IR 덱 기획</span>
+                <span style="font-size: 0.75rem; color: var(--accent-cyan); font-weight: 700;">실무</span>
+              </div>
+              <span class="skill-desc">증권사 리서치 보고서 포맷, Hallym's View 결론 선제시, IR 슬라이드 구조화</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Certificates Container -->
+      <div class="certificates-container">
+        <div class="cert-header">
+          <span>📜</span>
+          <span>자격증 및 어학 현황 (Certificates & Credentials)</span>
+        </div>
+        <div class="certs-grid">
+          <div class="cert-card">
+            <div>
+              <div class="cert-name">SQLD (SQL 개발자)</div>
+              <div class="cert-issuer">한국데이터산업진흥원 (K-Data)</div>
+            </div>
+            <span class="status-badge progress">In Progress</span>
+          </div>
+
+          <div class="cert-card">
+            <div>
+              <div class="cert-name">ADsP (데이터분석 준전문가)</div>
+              <div class="cert-issuer">한국데이터산업진흥원 (K-Data)</div>
+            </div>
+            <span class="status-badge progress">In Progress</span>
+          </div>
+
+          <div class="cert-card">
+            <div>
+              <div class="cert-name">빅데이터분석기사</div>
+              <div class="cert-issuer">과학기술정보통신부 / K-Data</div>
+            </div>
+            <span class="status-badge planned">Planned</span>
+          </div>
+
+          <div class="cert-card">
+            <div>
+              <div class="cert-name">투자자산운용사</div>
+              <div class="cert-issuer">금융투자협회 (KOFIA)</div>
+            </div>
+            <span class="status-badge planned">Planned</span>
+          </div>
+
+          <div class="cert-card">
+            <div>
+              <div class="cert-name">컴퓨터활용능력 1급</div>
+              <div class="cert-issuer">대한상공회의소</div>
+            </div>
+            <span class="status-badge active">Active</span>
+          </div>
+
+          <div class="cert-card">
+            <div>
+              <div class="cert-name">공인 어학 (TOEIC / OPIc)</div>
+              <div class="cert-issuer">글로벌 비즈니스 커뮤니케이션</div>
+            </div>
+            <span class="status-badge active">Verified</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Contact Section
+       ========================================================================== -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="contact-card">
+        <h2 class="contact-title">함께 비즈니스 가치를 창출할 기회를 기다립니다.</h2>
+        <p class="contact-desc">
+          핀테크 및 금융 데이터 분석 인턴십, 산학협력 프로젝트, 데이터 분석 공모전, 
+          또는 AI 스마트워크 워크플로우 협업에 관해 언제든 연락해 주시기 바랍니다.
+        </p>
+
+        <div class="email-box">
+          <span style="font-size: 1.25rem;">✉️</span>
+          <span id="userEmail" class="email-address">wnsghd0711@naver.com</span>
+          <button id="copyEmailBtn" class="copy-btn">
+            <span>복사하기</span>
+            <span>📋</span>
+          </button>
+        </div>
+
+        <div class="social-links-grid">
+          <a href="https://github.com/wnsghd0711" target="_blank" rel="noopener noreferrer" class="social-card">
+            <span style="font-size: 1.25rem;">🐙</span>
+            <span>GitHub Profile</span>
+          </a>
+          <a href="https://velog.io/@wnsghd0711" target="_blank" rel="noopener noreferrer" class="social-card">
+            <span style="font-size: 1.25rem;">📝</span>
+            <span>Tech Blog (Velog)</span>
+          </a>
+          <a href="https://linkedin.com/in/junhong-park" target="_blank" rel="noopener noreferrer" class="social-card">
+            <span style="font-size: 1.25rem;">💼</span>
+            <span>LinkedIn Profile</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Footer
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2026 박준홍 (Junhong Park). All Rights Reserved.</p>
+      <p class="footer-tech-stack">Built with Semantic HTML5, Vanilla CSS3, Modern JavaScript &bull; Hosted on GitHub Pages</p>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       Interactive Project Modal
+       ========================================================================== -->
+  <div id="projectModal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div>
+          <h3 id="modalTitle">프로젝트 상세</h3>
+          <div id="modalSubtitle" style="font-size: 0.85rem; color: var(--text-muted); margin-top: 2px;"></div>
+        </div>
+        <button id="modalCloseBtn" class="modal-close-btn" aria-label="모달 닫기">&times;</button>
+      </div>
+
+      <div class="modal-body">
+        <div class="modal-tabs">
+          <button class="modal-tab-btn active" data-tab="tab-overview">1. 분석 개요 & 결과</button>
+          <button class="modal-tab-btn" data-tab="tab-qa">2. 독립 검토 QA 내역</button>
+          <button class="modal-tab-btn" data-tab="tab-downloads">3. 산출물 다운로드</button>
+        </div>
+
+        <div id="tab-overview" class="tab-pane active"></div>
+        <div id="tab-qa" class="tab-pane"></div>
+        <div id="tab-downloads" class="tab-pane"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notice -->
+  <div id="toastNotice" class="toast-notice"></div>
+
+  <!-- Application Scripts -->
+  <script src="js/data/projects.js"></script>
+  <script src="js/modal.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
