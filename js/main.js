@@ -15,7 +15,7 @@
     const links = (p.links || [])
       .map((l) => `<a class="link" href="${esc(l.href)}"${l.external ? ' target="_blank" rel="noopener"' : ""}${l.download ? ` download="${esc(l.download)}"` : ""}>${esc(l.text)} <span aria-hidden="true">${l.download ? "↓" : "↗"}</span></a>`).join("");
     const play = p.video ? `<button class="link" type="button" data-video="${esc(p.video)}" data-title="${esc(p.title)}">영상 보기 <span aria-hidden="true">▶</span></button>` : "";
-    return `<article class="card" data-type="${esc(p.type)}">
+    return `<article class="card spot" data-type="${esc(p.type)}">
       ${media}
       <div class="card-body">
         <p class="meta"><span class="tag">${esc(p.label)}</span><span>${esc(p.date)}</span></p>
@@ -78,8 +78,60 @@
     const io = new IntersectionObserver((entries) => {
       entries.forEach((en) => { if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); } });
     }, { rootMargin: "0px 0px -8% 0px" });
-    document.querySelectorAll(".sec-head, .feature, .card, .steps li, .about-grid, .stats").forEach((el) => {
+    document.querySelectorAll(".sec-head, .feature, .card, .steps li, .about-grid, .stats, .focus-card, .cycle, .timeline li, .contact-title").forEach((el) => {
       el.classList.add("reveal"); io.observe(el);
     });
+  }
+
+  // 7) 스크롤 진행 막대
+  const bar = document.getElementById("progress");
+  const onScroll = () => {
+    const h = document.documentElement.scrollHeight - innerHeight;
+    bar.style.transform = `scaleX(${h > 0 ? scrollY / h : 0})`;
+  };
+  addEventListener("scroll", onScroll, { passive: true }); onScroll();
+
+  // 8) 숫자 올라가기
+  const counts = document.querySelectorAll(".count");
+  const still = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if ("IntersectionObserver" in window && !still) {
+    const co = new IntersectionObserver((entries) => {
+      entries.forEach((en) => {
+        if (!en.isIntersecting) return;
+        const el = en.target, to = +el.dataset.to, t0 = performance.now(), dur = 1400;
+        const tick = (now) => {
+          const k = Math.min(1, (now - t0) / dur), e = 1 - Math.pow(1 - k, 3);
+          el.textContent = Math.round(to * e);
+          if (k < 1) requestAnimationFrame(tick);
+        };
+        el.textContent = "0"; requestAnimationFrame(tick); co.unobserve(el);
+      });
+    }, { threshold: 0.6 });
+    counts.forEach((c) => co.observe(c));
+  }
+
+  // 9) 카드 위 빛 따라오기
+  document.addEventListener("pointermove", (e) => {
+    const el = e.target.closest && e.target.closest(".spot");
+    if (!el) return;
+    const r = el.getBoundingClientRect();
+    el.style.setProperty("--mx", `${e.clientX - r.left}px`);
+    el.style.setProperty("--my", `${e.clientY - r.top}px`);
+  }, { passive: true });
+
+  // 10) 사이클 그래프 그리기
+  const cyc = document.getElementById("cycle");
+  if (cyc) {
+    if ("IntersectionObserver" in window && !still) {
+      const o = new IntersectionObserver(([en]) => { if (en.isIntersecting) { cyc.classList.add("draw"); o.disconnect(); } }, { threshold: 0.35 });
+      o.observe(cyc);
+    } else cyc.classList.add("draw");
+  }
+
+  // 11) 칩 캡션 시계
+  const clock = document.getElementById("chipClock");
+  if (clock && !still) {
+    let n = 0;
+    setInterval(() => { n = (n + 1) % 1000; clock.textContent = `CYCLE ${String(n).padStart(3, "0")} · DATA → GPU`; }, 120);
   }
 })();
