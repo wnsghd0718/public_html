@@ -3,9 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>박준홍 — Memory · Valuation · AI</title>
-  <meta name="description" content="메모리 반도체와 기업 가치를 공부하는 경영학도 박준홍의 포트폴리오">
+  <title>박준홍 — 데이터를 모으고, 묻고, 정리합니다</title>
+  <meta name="description" content="한림대학교 경영학과 박준홍의 포트폴리오. 메모리 반도체 리서치, 데이터 분석, 전자책, 모션 영상 프로젝트.">
   <meta name="theme-color" content="#0A0B0D">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="박준홍 — 데이터를 모으고, 묻고, 정리합니다">
+  <meta property="og:description" content="메모리 반도체 리서치, 데이터 분석, 전자책, 모션 영상까지. AI를 활용해 아이디어를 결과물로 옮깁니다.">
+  <meta property="og:url" content="https://aismartwork20212954.netlify.app/">
+  <meta property="og:image" content="https://aismartwork20212954.netlify.app/assets/img/og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230A0B0D'/%3E%3Crect x='9' y='9' width='14' height='14' fill='none' stroke='%23F0A45B' stroke-width='1.6'/%3E%3Cpath d='M12 9V5M16 9V5M20 9V5M12 27v-4M16 27v-4M20 27v-4M9 12H5M9 16H5M9 20H5M27 12h-4M27 16h-4M27 20h-4' stroke='%23E8EBEE' stroke-width='1.2'/%3E%3C/svg%3E">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,7 +30,7 @@
   <header class="topbar">
     <div class="wrap topbar-inner">
       <a class="brand" href="#top"><span class="brand-mark" aria-hidden="true"></span>박준홍<span class="brand-en">Park Junhong</span></a>
-      <nav class="nav" aria-label="메인 메뉴">
+      <nav class="nav" id="nav" aria-label="메인 메뉴">
         <a href="#focus">관심 분야</a>
         <a href="#work">프로젝트</a>
         <a href="#process">작업 방식</a>
@@ -32,6 +40,9 @@
       <button class="theme-btn" id="themeBtn" type="button" aria-label="밝게/어둡게 전환">
         <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9 7 7 0 0 1-9-9z" fill="currentColor"/></svg>
       </button>
+      <button class="menu-btn" id="menuBtn" type="button" aria-label="메뉴 열기" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span>
+      </button>
     </div>
   </header>
 
@@ -40,7 +51,7 @@
     <section class="hero-band">
       <div class="hero wrap">
         <div class="hero-text">
-          <p class="eyebrow"><span class="mono">MEMORY · VALUATION · AI WORKFLOW</span>한림대학교 경영학 · 금융재무학</p>
+          <p class="eyebrow"><span class="mono">COLLECT · ASK · ORGANIZE</span>한림대학교 경영학 · 금융재무학</p>
           <h1><span class="line">데이터를 모으고,</span><span class="line">묻고, <em>정리합니다.</em></span></h1>
           <p class="lede">
             <strong>한림대학교 경영학과 박준홍.</strong><br>
@@ -50,17 +61,17 @@
             <a class="btn btn-solid" href="#work">프로젝트 보기 <span aria-hidden="true">→</span></a>
             <a class="btn btn-line" href="#contact">연락하기</a>
           </div>
-          <dl class="datasheet">
-            <div><dt>PART NO.</dt><dd>20212954</dd></div>
-            <div><dt>MAJOR</dt><dd>경영학 + 금융재무학</dd></div>
-            <div><dt>FOCUS</dt><dd>메모리 반도체 · 기업 가치평가</dd></div>
-            <div><dt>STACK</dt><dd>Claude · Colab · Python · HTML</dd></div>
-          </dl>
         </div>
         <figure class="hero-chip" aria-hidden="true">
           <canvas id="chipCanvas"></canvas>
-          <figcaption class="mono"><span>FIG. 01 — HBM DIE</span><span id="chipClock">DATA → GPU</span></figcaption>
+          <figcaption class="mono"><span>FIG. 01 — HBM DIE</span><span>DATA → GPU</span></figcaption>
         </figure>
+        <dl class="datasheet">
+          <div><dt>학번</dt><dd>20212954</dd></div>
+          <div><dt>전공</dt><dd>경영학 · 금융재무학 복수전공</dd></div>
+          <div><dt>관심 분야</dt><dd><span>메모리 반도체</span> · <span>기업 가치평가</span></dd></div>
+          <div><dt>주로 쓰는 도구</dt><dd><span>Claude</span> · <span>Colab</span> · <span>Python</span> · <span>HTML</span></dd></div>
+        </dl>
       </div>
       <a class="scroll-hint mono" href="#focus" aria-label="아래로 이동"><span></span>SCROLL</a>
     </section>
@@ -75,10 +86,10 @@
 
     <div class="wrap">
       <dl class="stats">
-        <div><dt><span class="count" data-to="6">6</span></dt><dd>완성한 프로젝트</dd></div>
-        <div><dt><span class="count" data-to="12">12</span><small>장</small></dt><dd>데이터 분석 그래프</dd></div>
-        <div><dt><span class="count" data-to="20">20</span><small>쪽</small></dt><dd>직접 쓴 투자 전자책</dd></div>
-        <div><dt><span class="count" data-to="90">90</span><small>초</small></dt><dd>모션 영상 3편 합계</dd></div>
+        <div><dt><span class="count" data-to="6">6</span><small>개</small></dt><dd>완성한 프로젝트</dd></div>
+        <div><dt>PER <span class="count" data-to="4" data-from="3">3~4</span><small>배</small></dt><dd>사상 최대 이익에도 낮았던 주가 배수</dd></div>
+        <div><dt><span class="count" data-to="-78" data-prefix="−">−78</span><small>%</small></dt><dd>2019년 재현 시 SK하이닉스 스트레스 테스트</dd></div>
+        <div><dt><span class="count" data-to="73.6" data-dec="1">73.6</span><small>%</small></dt><dd>부하율 1.2 초과일의 SLA 목표 미달 비율</dd></div>
       </dl>
     </div>
 
@@ -120,43 +131,71 @@
           <article class="focus-card spot">
             <svg class="focus-ico" viewBox="0 0 120 80" aria-hidden="true">
               <g fill="none" stroke="currentColor" stroke-width="1.2">
-                <circle cx="20" cy="40" r="8"/><circle cx="60" cy="18" r="8"/><circle cx="60" cy="62" r="8"/><circle cx="100" cy="40" r="8"/>
-                <path d="M28 37l24-15M28 43l24 15M68 21l24 15M68 59l24-15M60 26v28"/>
+                <rect x="38" y="6" width="44" height="68" rx="6"/>
+                <path d="M44 50 L54 40 L62 46 L76 28"/>
+                <path d="M46 62h28"/>
               </g>
-              <circle class="hot-dot" cx="100" cy="40" r="3"/>
+              <circle class="hot-dot" cx="76" cy="28" r="3"/>
             </svg>
-            <p class="focus-k mono">DATA × AI</p>
-            <h3>데이터와 AI 작업 방식</h3>
-            <p>질문을 먼저 정하고, 작은 샘플로 시험하고, 다른 AI로 검토한 뒤 웹으로 공개합니다. 도구가 바뀌어도 이 순서는 지키려고 합니다.</p>
+            <p class="focus-k mono">TOOLS</p>
+            <h3>투자를 돕는 도구</h3>
+            <p>분석한 내용을 실제로 쓸 수 있는 형태로 옮기는 데 관심이 있습니다. 팀 프로젝트로 레버리지 ETF의 손익을 계산하는 앱 ‘포트핏’을 만들었고, 점검표를 전자책으로 정리했습니다.</p>
           </article>
         </div>
 
-        <!-- 메모리 사이클 개념도 -->
+        <!-- 실제 수치 그래프 -->
         <figure class="cycle" id="cycle">
           <figcaption>
-            <span class="mono">FIG. 02 — MEMORY CYCLE</span>
-            <strong>메모리 사이클을 보는 방법</strong>
-            <span class="note">흐름을 설명하기 위한 개념도이며 실제 가격 데이터가 아닙니다.</span>
+            <span class="mono">FIG. 02 — 2018 vs 2026</span>
+            <strong>이익이 정점일 때, 사이클은 어디쯤일까</strong>
           </figcaption>
-          <svg viewBox="0 0 1000 300" preserveAspectRatio="none" role="img" aria-label="2016년부터 2026년까지 메모리 사이클 개념도: 2018년 정점, 2019년 하락, 2023년 바닥, 2026년 HBM 수요">
-            <g class="cyc-grid">
-              <line x1="0" y1="260" x2="1000" y2="260"/>
-              <line x1="100" y1="20" x2="100" y2="260"/><line x1="300" y1="20" x2="300" y2="260"/><line x1="500" y1="20" x2="500" y2="260"/><line x1="700" y1="20" x2="700" y2="260"/><line x1="900" y1="20" x2="900" y2="260"/>
-            </g>
-            <path class="cyc-area" d="M0 230 C 120 220, 200 60, 260 55 S 360 200, 420 215 S 600 245, 680 240 S 860 120, 1000 40 L1000 260 L0 260Z"/>
-            <path class="cyc-line" d="M0 230 C 120 220, 200 60, 260 55 S 360 200, 420 215 S 600 245, 680 240 S 860 120, 1000 40"/>
-            <g class="cyc-pt"><circle cx="260" cy="55" r="5"/></g>
-            <g class="cyc-pt"><circle cx="420" cy="215" r="5"/></g>
-            <g class="cyc-pt"><circle cx="680" cy="240" r="5"/></g>
-            <g class="cyc-pt now"><circle cx="1000" cy="40" r="6"/></g>
-          </svg>
-          <ol class="cyc-labels">
-            <li style="--x:26%"><b>2018</b>슈퍼사이클 정점</li>
-            <li style="--x:42%"><b>2019</b>재고 증가, 급락</li>
-            <li style="--x:68%"><b>2023</b>감산 후 바닥</li>
-            <li style="--x:100%" class="end"><b>2026</b>HBM 수요, 이번엔 다를까?</li>
-          </ol>
-          <div class="cyc-axis mono"><span>2016</span><span>2018</span><span>2020</span><span>2022</span><span>2024</span><span>2026</span></div>
+          <div class="ch-wrap">
+            <div class="ch-panel">
+              <p class="ch-title">2018년 슈퍼사이클의 끝 <span>SK하이닉스 연간 영업이익 · 조원</span></p>
+              <svg class="ch ch-a" viewBox="0 0 360 260" role="img" aria-label="SK하이닉스 연간 영업이익: 2017년 13.7조원, 2018년 20.8조원, 2019년 2.7조원">
+<line class="gl" x1="40" y1="220.0" x2="350" y2="220.0"/><text class="ax" x="32" y="224.0" text-anchor="end">0</text>
+<line class="gl" x1="40" y1="144.0" x2="350" y2="144.0"/><text class="ax" x="32" y="148.0" text-anchor="end">10</text>
+<line class="gl" x1="40" y1="68.0" x2="350" y2="68.0"/><text class="ax" x="32" y="72.0" text-anchor="end">20</text>
+<rect class="bar" x="70" y="115.7" width="56" height="104.3" style="--d:0.0s"/>
+<text class="val" x="98" y="107.7" text-anchor="middle">13.7</text><text class="ax" x="98" y="238" text-anchor="middle">2017</text>
+<rect class="bar hot" x="165" y="61.6" width="56" height="158.4" style="--d:0.15s"/>
+<text class="val" x="193" y="53.6" text-anchor="middle">20.8</text><text class="ax" x="193" y="238" text-anchor="middle">2018</text>
+<rect class="bar" x="260" y="199.4" width="56" height="20.6" style="--d:0.3s"/>
+<text class="val" x="288" y="191.4" text-anchor="middle">2.7</text><text class="ax" x="288" y="238" text-anchor="middle">2019</text>
+<path class="arrow" d="M222 58 C 262 58, 286 110, 288 180" marker-end="url(#arw)"/><text class="tag-t" x="300" y="110">−87%</text><defs><marker id="arw" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="arw"/></marker></defs>
+</svg>
+            </div>
+            <div class="ch-panel">
+              <p class="ch-title">2026년, 1년 만에 이익 9배·7배 <span>분기 영업이익 · 조원</span></p>
+              <svg class="ch ch-b" viewBox="0 0 520 260" role="img" aria-label="분기 영업이익(조원). 삼성전자 3Q25 12.2, 4Q25 20.1, 1Q26 57.2, 2Q26 89.5, 3Q26 107.4 잠정. SK하이닉스 11.4, 19.2, 37.6, 60.5, 77.0 컨센서스">
+<line class="gl" x1="40" y1="220.0" x2="510" y2="220.0"/><text class="ax" x="32" y="224.0" text-anchor="end">0</text>
+<line class="gl" x1="40" y1="156.7" x2="510" y2="156.7"/><text class="ax" x="32" y="160.7" text-anchor="end">40</text>
+<line class="gl" x1="40" y1="93.3" x2="510" y2="93.3"/><text class="ax" x="32" y="97.3" text-anchor="end">80</text>
+<line class="gl" x1="40" y1="30.0" x2="510" y2="30.0"/><text class="ax" x="32" y="34.0" text-anchor="end">120</text>
+<rect class="bar s1" x="62" y="200.7" width="30" height="19.3" style="--d:0.00s"/>
+<text class="val sm" x="77" y="194.7" text-anchor="middle">12.2</text>
+<rect class="bar s2" x="96" y="201.9" width="30" height="18.1" style="--d:0.05s"/>
+<text class="val sm" x="111" y="195.9" text-anchor="middle">11.4</text>
+<text class="ax" x="94" y="238" text-anchor="middle">3Q25</text>
+<rect class="bar s1" x="154" y="188.2" width="30" height="31.8" style="--d:0.10s"/>
+<rect class="bar s2" x="188" y="189.6" width="30" height="30.4" style="--d:0.15s"/>
+<text class="ax" x="186" y="238" text-anchor="middle">4Q25</text>
+<rect class="bar s1" x="246" y="129.4" width="30" height="90.6" style="--d:0.20s"/>
+<rect class="bar s2" x="280" y="160.5" width="30" height="59.5" style="--d:0.25s"/>
+<text class="ax" x="278" y="238" text-anchor="middle">1Q26</text>
+<rect class="bar s1" x="338" y="78.3" width="30" height="141.7" style="--d:0.30s"/>
+<rect class="bar s2" x="372" y="124.2" width="30" height="95.8" style="--d:0.35s"/>
+<text class="ax" x="370" y="238" text-anchor="middle">2Q26</text>
+<rect class="bar s1" x="430" y="49.9" width="30" height="170.1" style="--d:0.40s"/>
+<text class="val sm" x="445" y="43.9" text-anchor="middle">107.4</text>
+<rect class="bar s2" x="464" y="98.1" width="30" height="121.9" style="--d:0.45s"/>
+<text class="val sm" x="479" y="92.1" text-anchor="middle">77</text>
+<text class="ax" x="462" y="238" text-anchor="middle">3Q26</text>
+</svg>
+              <p class="legend"><i class="lg s1"></i>삼성전자(전사) <i class="lg s2"></i>SK하이닉스</p>
+            </div>
+          </div>
+          <p class="ch-source">자료: 각 사 실적 발표, 에프앤가이드 컨센서스(2026.10.18), 파이낸셜뉴스(2019.1.24), 데일리안(2020.1.30). 2017년은 2018년 실적(전년 대비 +51.9%)으로 역산. 3Q26 삼성전자는 잠정실적, SK하이닉스는 컨센서스. 중간고사 보고서의 [그림 1·2]를 다시 그렸습니다.</p>
         </figure>
       </div>
     </section>
@@ -167,21 +206,24 @@
         <header class="sec-head">
           <span class="sec-no">02 / PROJECTS</span>
           <h2>프로젝트</h2>
-          <p>무엇을 물었고, 무엇을 만들었고, 무엇을 알게 됐는지 정리했습니다.</p>
+          <p>무엇을 물었고, 무엇을 만들었고, 무엇을 알게 됐는지 정리했습니다. 카드를 누르면 제작 과정을 볼 수 있습니다.</p>
         </header>
 
         <article class="feature">
           <div class="feature-media">
             <button class="media-btn" type="button" data-video="assets/video/semi-teaser.mp4" data-title="이번엔 다를까? — 8초 티저" aria-label="8초 티저 영상 재생">
-              <img src="assets/img/semi-cover.jpg" alt="반도체 투자 보고서 표지 이미지" loading="lazy">
+              <img src="assets/img/semi-cover.jpg" alt="HBM 적층 칩 위로 금빛 데이터 흐름이 솟아오르는 보고서 표지 이미지" loading="lazy">
               <span class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg>8초 티저</span>
             </button>
-            <div class="feature-strip mono">
-              <span>REPORT · 10P</span><span>DECK · PPTX</span><span>COVER · GEMINI</span><span>TEASER · VEO</span>
+            <div class="feature-strip">
+              <button type="button" data-gallery="report"><b>보고서</b><span>A4 10쪽 넘겨 보기</span></button>
+              <button type="button" data-gallery="deck"><b>발표자료</b><span>16장 넘겨 보기</span></button>
+              <button type="button" data-video="assets/video/semi-teaser.mp4" data-title="이번엔 다를까? — 8초 티저"><b>티저 영상</b><span>Google Veo · 8초</span></button>
+              <button type="button" data-detail="semi"><b>제작 과정</b><span>프롬프트 · 검토 26건</span></button>
             </div>
           </div>
           <div class="feature-body">
-            <p class="meta"><span class="tag">FEATURED · 산업 리서치</span><span>2026.10 · 개인 프로젝트</span></p>
+            <p class="meta"><span class="tag">대표 프로젝트 · 산업 리서치</span><span>2026.10 · 개인 프로젝트</span></p>
             <h3>이번엔 다를까?<small>2018년 슈퍼사이클과 비교한 메모리 반도체 투자 전망</small></h3>
             <p class="q">“이익은 사상 최대인데 PER은 3~4배. 시장은 왜 고점을 의심할까?”</p>
             <p>삼성전자와 SK하이닉스를 대상으로 2018년 사이클과 지금을 8개 항목으로 비교한 A4 10쪽 보고서입니다. 쓰는 AI와 검토하는 AI를 나눠 숫자와 표현을 다시 확인했고, 보고서를 발표자료로 바꾸는 과정은 스킬로 만들어 자동화했습니다.</p>
@@ -204,16 +246,21 @@
             </details>
             <p class="tools">Claude · Gemini(표지) · Google Veo(영상) · Antigravity 스킬</p>
             <div class="links">
-              <a class="btn btn-solid" href="assets/docs/semi-report.docx" download="20212954_반도체투자_보고서.docx">보고서 .docx <span aria-hidden="true">↓</span></a>
-              <a class="btn btn-line" href="assets/docs/semi-deck.pptx" download="20212954_반도체투자_발표자료.pptx">발표자료 .pptx <span aria-hidden="true">↓</span></a>
+              <button class="btn btn-solid" type="button" data-detail="semi">제작 과정 보기 <span aria-hidden="true">→</span></button>
+              <a class="btn btn-line" href="assets/docs/semi-report.pdf" download="20212954_반도체투자_보고서.pdf">보고서 PDF <span aria-hidden="true">↓</span></a>
+              <a class="btn btn-line" href="assets/docs/semi-deck.pdf" download="20212954_반도체투자_발표자료.pdf">발표자료 PDF <span aria-hidden="true">↓</span></a>
             </div>
+            <p class="orig">원본 파일: <a href="assets/docs/semi-report.docx" download="20212954_반도체투자_보고서.docx">보고서 .docx</a> · <a href="assets/docs/semi-deck.pptx" download="20212954_반도체투자_발표자료.pptx">발표자료 .pptx</a></p>
           </div>
         </article>
 
-        <div class="filters" role="tablist" aria-label="프로젝트 분류">
-          <button class="chip is-on" data-filter="all" type="button">전체 <span class="mono">05</span></button>
-          <button class="chip" data-filter="research" type="button">리서치 · 분석 <span class="mono">02</span></button>
-          <button class="chip" data-filter="motion" type="button">모션 · 영상 <span class="mono">03</span></button>
+        <div class="more-head">
+          <h3>그 밖의 프로젝트 <span class="mono">05</span></h3>
+          <div class="filters" role="tablist" aria-label="프로젝트 분류">
+            <button class="chip is-on" data-filter="all" type="button">전체</button>
+            <button class="chip" data-filter="research" type="button">리서치 · 분석 <span class="mono">02</span></button>
+            <button class="chip" data-filter="motion" type="button">모션 · 영상 <span class="mono">03</span></button>
+          </div>
         </div>
         <div class="grid" id="projectGrid"></div>
       </div>
@@ -231,8 +278,8 @@
           <li class="spot">
             <span class="step-no">STEP 01</span>
             <h3>질문부터 정하기</h3>
-            <p>바로 만들기보다 AI가 저에게 질문하게 해서(grill-me) 범위와 목표를 먼저 좁힙니다.</p>
-            <em>FC 분석 방향 5문항 · 모션 장면 계획서</em>
+            <p>바로 만들기보다 AI가 저에게 질문을 던지게 해서(grill-me) 기준과 범위를 먼저 좁힙니다. 예를 들어 “SLA가 무너졌다는 기준은 몇 %인가?” 같은 질문에 먼저 답합니다.</p>
+            <em>FC 분석 기준 5문항 · 모션 장면 계획서</em>
           </li>
           <li class="spot">
             <span class="step-no">STEP 02</span>
@@ -244,7 +291,7 @@
             <span class="step-no">STEP 03</span>
             <h3>다른 AI로 검토하기</h3>
             <p>만든 AI와 검토하는 AI를 나눠 숫자, 출처, 과장된 표현을 다시 확인합니다.</p>
-            <em>반도체 보고서 검토 · FC 보고서 Gemini 대조</em>
+            <em>반도체 보고서 검토 26건 · FC 보고서 Gemini 대조</em>
           </li>
           <li class="spot">
             <span class="step-no">STEP 04</span>
@@ -268,7 +315,6 @@
             <p class="about-lead">숫자는 결과를 말해 주지만, 왜 그런 결과가 나왔는지는 산업을 알아야 보인다고 생각합니다.</p>
             <p>그래서 재무제표와 함께 반도체 공정, 수요 구조, 계약 방식을 같이 공부합니다. 직접 반도체 종목에 투자하면서 생긴 궁금증이 보고서가 되고, 전자책이 되고, 30초 영상이 됐습니다.</p>
             <p>AI는 생각을 대신해 주는 도구가 아니라, 제가 세운 가설을 빠르게 확인하고 결과물로 옮기게 해 주는 도구로 씁니다. 그래서 결과물마다 어떤 부분을 AI에 맡기고 어떤 부분을 직접 확인했는지 기록해 둡니다.</p>
-
           </div>
           <aside class="about-side">
             <h3 class="mini">학력</h3>
@@ -285,13 +331,11 @@
               <div><dt>분석</dt><dd><span>Google Colab</span><span>Python</span><span>pandas</span><span>matplotlib</span><span>scikit-learn</span><span>Excel</span></dd></div>
               <div><dt>웹</dt><dd><span>HTML</span><span>CSS</span><span>JavaScript</span><span>GitHub</span><span>Netlify</span></dd></div>
             </dl>
-            <h3 class="mini">최근 기록</h3>
-            <ol class="timeline">
-              <li><span class="mono">2026.10</span><b>메모리 반도체 투자 보고서</b><em>보고서 · 발표자료 · 표지 · 티저 영상</em></li>
-              <li><span class="mono">2026.11</span><b>개인 포트폴리오 웹페이지</b><em>기획부터 GitHub · Netlify 배포까지</em></li>
-              <li><span class="mono">2026.11</span><b>30초 모션 3편</b><em>HBM 브리핑 · 학과 홍보 · 포트핏 광고</em></li>
-              <li><span class="mono">2026.11</span><b>HBM 투자 취급설명서</b><em>20쪽 PDF와 넘겨 보는 웹 리더</em></li>
-              <li><span class="mono">2026.11</span><b>FC 인력계획 SLA 분석</b><em>Colab 분석 · 보고서 · 웹 이북</em></li>
+            <h3 class="mini">작업하며 지키게 된 원칙</h3>
+            <ol class="principles">
+              <li><span class="mono">01</span><div><b>숫자는 출처와 함께</b><em>그럴듯한 숫자일수록 원문과 대조합니다. 검토에서 ‘매출 비중’과 ‘점유율’이 뒤바뀐 걸 잡았습니다.</em></div></li>
+              <li><span class="mono">02</span><div><b>틀렸을 때도 같이 보여 주기</b><em>목표주가 옆에 스트레스 테스트를, 분석 결과 옆에 데이터의 한계를 적습니다.</em></div></li>
+              <li><span class="mono">03</span><div><b>한 화면에는 한 메시지</b><em>30초 영상도, 20쪽 전자책도 한 장면·한 쪽에 하나만 말하도록 덜어 냅니다.</em></div></li>
             </ol>
           </aside>
         </div>
@@ -302,7 +346,7 @@
     <section class="section contact" id="contact">
       <div class="wrap">
         <p class="mono contact-k">05 / CONTACT</p>
-        <h2 class="contact-title">함께 이야기 나눌<br>질문이 있다면.</h2>
+        <h2 class="contact-title">궁금한 점이 있다면<br>편하게 연락 주세요.</h2>
         <p class="contact-sub">프로젝트에 대한 질문이나 피드백 모두 반갑습니다.</p>
         <div class="contact-row">
           <a class="mail" href="mailto:wnsghd0711@naver.com">wnsghd0711@naver.com</a>
@@ -316,16 +360,43 @@
   <footer class="footer">
     <div class="wrap footer-inner">
       <span>© 2026 박준홍 · Park Junhong</span>
-      <span class="mono">BUILT WITH HTML · CSS · JS</span>
+      <span class="foot-mid">마지막 업데이트 2026.11.23 · HTML, CSS, JavaScript로 직접 만든 페이지</span>
+      <a href="#top" class="foot-top">맨 위로 ↑</a>
     </div>
   </footer>
+
+  <a class="to-top" id="toTop" href="#top" aria-label="맨 위로">
+    <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 5l-7 7h4v7h6v-7h4z" fill="currentColor"/></svg>
+  </a>
 
   <dialog class="player" id="player" aria-label="영상 보기">
     <div class="player-bar">
       <span id="playerTitle"></span>
-      <button type="button" id="playerClose" aria-label="닫기">닫기 ✕</button>
+      <button type="button" class="dlg-close" data-close aria-label="닫기">닫기 ✕</button>
     </div>
     <video id="playerVideo" controls playsinline preload="none"></video>
+  </dialog>
+
+  <dialog class="detail" id="detail" aria-labelledby="detailTitle">
+    <div class="detail-bar">
+      <span class="mono" id="detailKicker"></span>
+      <button type="button" class="dlg-close" data-close aria-label="닫기">닫기 ✕</button>
+    </div>
+    <div class="detail-body" id="detailBody"></div>
+  </dialog>
+
+  <dialog class="viewer" id="viewer" aria-label="문서 넘겨 보기">
+    <div class="viewer-bar">
+      <span id="viewerTitle"></span>
+      <span class="mono" id="viewerCount"></span>
+      <button type="button" class="dlg-close" data-close aria-label="닫기">닫기 ✕</button>
+    </div>
+    <div class="viewer-stage">
+      <button type="button" class="nav-btn prev" id="viewerPrev" aria-label="이전 쪽">‹</button>
+      <img id="viewerImg" alt="">
+      <button type="button" class="nav-btn next" id="viewerNext" aria-label="다음 쪽">›</button>
+    </div>
+    <div class="viewer-thumbs" id="viewerThumbs"></div>
   </dialog>
 
   <script src="js/projects.js"></script>

@@ -383,3 +383,25 @@ header .subtitle { margin-bottom: 1rem; font-size: 1rem; }
 header .book-meta { margin-bottom: 1.2rem; }
 .toc-mini { margin-top: 1.2rem; }
 @media (max-height: 820px) { h1 { font-size: 1.9rem; } .toc-mini button { padding: .08rem 0; } }
+
+/* ===== 포트폴리오 디자인에 맞춘 덮어쓰기 ===== */
+:root {
+    --bg-dark: #0A0B0D; --text-main: #E8EBEE; --text-muted: #9AA2AC;
+    --primary: #F0A45B; --primary-hover: #E3924A; --accent: #F0A45B;
+    --glass-bg: #13161B; --glass-border: #232830; --glass-shadow: 0 20px 40px -24px rgba(0,0,0,.9);
+}
+body { font-family: "Pretendard", -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", sans-serif; letter-spacing: -0.01em; }
+.bg-elements { background: #0A0B0D; }
+.bg-elements::before { content: ""; position: absolute; inset: 0; background-image: linear-gradient(#232830 1px, transparent 1px), linear-gradient(90deg, #232830 1px, transparent 1px); background-size: 48px 48px; opacity: .35; mask-image: linear-gradient(180deg, #000, transparent 80%); -webkit-mask-image: linear-gradient(180deg, #000, transparent 80%); }
+.orb { display: none; }
+.glass-panel { background: var(--glass-bg) !important; border: 1px solid var(--glass-border) !important; backdrop-filter: none !important; -webkit-backdrop-filter: none !important; border-radius: 10px !important; }
+.gradient-text { background: none !important; -webkit-text-fill-color: currentColor !important; color: #E8EBEE; font-weight: 800; letter-spacing: -0.04em; }
+.eyebrow { color: #F0A45B !important; border-color: #F0A45B !important; font-family: "JetBrains Mono", ui-monospace, monospace; letter-spacing: .2em !important; }
+.upload-btn.open-btn { background: #E8EBEE !important; color: #0A0B0D !important; box-shadow: none !important; }
+.upload-btn.open-btn:hover { background: #F0A45B !important; }
+.progress { background: #F0A45B !important; }
+.ghost-btn { display: none !important; }
+.download-link:hover, .toc-mini button:hover { color: #F0A45B !important; }
+.toc-mini span { color: #F0A45B !important; }
+.back-link { position: fixed; top: 16px; left: 16px; z-index: 30; display: inline-flex; align-items: center; gap: 6px; padding: 8px 14px; border: 1px solid #232830; border-radius: 999px; background: rgba(10,11,13,.85); color: #E8EBEE; text-decoration: none; font-size: .88rem; font-weight: 600; }
+.back-link:hover { border-color: #F0A45B; color: #F0A45B; }
