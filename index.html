@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>박준홍 포트폴리오</title>
   <meta name="description" content="한림대학교 경영학·금융재무학 복수전공 박준홍의 2026년 2학기 AI 스마트워크 결과물 모음">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23171512'/%3E%3Ctext x='16' y='22' font-family='serif' font-size='17' font-weight='700' text-anchor='middle' fill='%23F3EFE6'%3E박%3C/text%3E%3C/svg%3E">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230A0B0D'/%3E%3Ctext x='16' y='22' font-family='sans-serif' font-size='17' font-weight='700' text-anchor='middle' fill='%23F2A65A'%3E박%3C/text%3E%3C/svg%3E">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500;700;900&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap">
   <link rel="stylesheet" href="css/style.css">
   <script>
     try { const t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
@@ -33,9 +33,9 @@
 
   <main id="top">
     <!-- HERO -->
-    <section class="hero wrap">
+    <section class="hero-band"><div class="hero wrap">
       <div class="hero-text">
-        <p class="eyebrow">한림대학교 경영학 · 금융재무학 복수전공</p>
+        <p class="eyebrow"><span class="mono">SEMICONDUCTOR × FINANCE × AI</span>한림대학교 경영학 · 금융재무학 복수전공</p>
         <h1>숫자를 읽고,<br>AI로 끝까지<br>만들어 봅니다.</h1>
         <p class="lede">
           안녕하세요, 박준홍입니다. 경영과 재무를 공부하면서 AI로 리서치, 데이터 분석, 영상 제작을 직접 해 보고 있습니다.
@@ -46,11 +46,11 @@
           <a class="btn btn-line" href="#contact">연락하기</a>
         </div>
       </div>
-      <figure class="hero-photo">
-        <img src="assets/img/profile.jpg" alt="박준홍 프로필 사진" width="720" height="720">
-        <figcaption><span>20212954</span><span>Hallym Univ.</span></figcaption>
+      <figure class="hero-chip" aria-hidden="true">
+        <canvas id="chipCanvas"></canvas>
+        <figcaption class="mono"><span>FIG. 01 — HBM DIE</span><span>DATA → GPU</span></figcaption>
       </figure>
-    </section>
+    </div></section>
 
     <div class="wrap">
       <dl class="stats">
@@ -220,5 +220,6 @@
 
   <script src="js/projects.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/chip.js"></script>
 </body>
 </html>

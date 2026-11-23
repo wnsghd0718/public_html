@@ -1,35 +1,26 @@
-/* ===== 색·글꼴 ===== */
+/* ===== 색·글꼴 (기본: 어두운 테마, 구리색 포인트) ===== */
 :root {
-  --paper: #F3EFE6;
-  --paper-2: #EAE4D7;
-  --card: #FBF9F4;
-  --ink: #171512;
-  --ink-2: #4A453D;
-  --ink-3: #847C70;
-  --rule: #D6CEBE;
-  --accent: #B93A1F;
-  --accent-ink: #FFF8F2;
-  --shadow: 0 1px 0 rgba(23,21,18,.04), 0 12px 30px -18px rgba(23,21,18,.35);
-  --serif: "Noto Serif KR", "Apple Myungjo", serif;
+  --paper: #0A0B0D;
+  --paper-2: #101216;
+  --card: #13161B;
+  --ink: #E8EBEE;
+  --ink-2: #A7AEB7;
+  --ink-3: #6B737D;
+  --rule: #232830;
+  --accent: #F0A45B;
+  --accent-ink: #160D04;
+  --shadow: 0 20px 40px -24px rgba(0,0,0,.9);
+  --serif: "Pretendard", -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", sans-serif;
   --sans: "Pretendard", -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", sans-serif;
   --mono: "JetBrains Mono", ui-monospace, monospace;
-  color-scheme: light;
-}
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --paper: #141311; --paper-2: #1B1A17; --card: #1E1C19;
-    --ink: #EEE8DC; --ink-2: #BDB5A7; --ink-3: #8A8276; --rule: #34302A;
-    --accent: #E8704F; --accent-ink: #1A0E09;
-    --shadow: 0 12px 30px -18px rgba(0,0,0,.8);
-    color-scheme: dark;
-  }
-}
-:root[data-theme="dark"] {
-  --paper: #141311; --paper-2: #1B1A17; --card: #1E1C19;
-  --ink: #EEE8DC; --ink-2: #BDB5A7; --ink-3: #8A8276; --rule: #34302A;
-  --accent: #E8704F; --accent-ink: #1A0E09;
-  --shadow: 0 12px 30px -18px rgba(0,0,0,.8);
   color-scheme: dark;
+}
+:root[data-theme="light"] {
+  --paper: #F3F4F5; --paper-2: #E9EBED; --card: #FFFFFF;
+  --ink: #0E1115; --ink-2: #4A525C; --ink-3: #7D858F; --rule: #D5D9DE;
+  --accent: #B8611A; --accent-ink: #FFF7EF;
+  --shadow: 0 16px 32px -22px rgba(14,17,21,.45);
+  color-scheme: light;
 }
 
 /* ===== 기본 ===== */
@@ -88,19 +79,16 @@ button { font: inherit; color: inherit; cursor: pointer; }
 /* ===== 히어로 ===== */
 .hero { display: grid; gap: 40px; padding-top: 56px; padding-bottom: 40px; align-items: center; }
 @media (min-width: 880px) { .hero { grid-template-columns: 1.35fr 1fr; gap: 64px; padding-top: 88px; padding-bottom: 56px; } }
-.eyebrow { font-size: .9rem; color: var(--ink-3); margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
-.eyebrow::before { content: ""; width: 28px; height: 1px; background: var(--accent); }
+.eyebrow { font-size: .9rem; color: var(--ink-3); margin-bottom: 22px; display: flex; flex-direction: column; gap: 8px; }
+.eyebrow .mono { color: var(--accent); font-size: .72rem; letter-spacing: .14em; display: flex; align-items: center; gap: 10px; }
+.eyebrow .mono::before { content: ""; width: 24px; height: 1px; background: var(--accent); }
 .hero h1 {
   font-family: var(--serif); font-weight: 900;
-  font-size: clamp(2.4rem, 7.2vw, 4.4rem); line-height: 1.16; letter-spacing: -0.035em;
+  font-size: clamp(2.5rem, 7.4vw, 4.6rem); line-height: 1.12; letter-spacing: -0.045em;
 }
 .lede { margin-top: 24px; max-width: 34em; font-size: 1.06rem; color: var(--ink-2); }
 .lede strong { color: var(--ink); font-weight: 600; }
 .hero-cta { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 32px; }
-.hero-photo { position: relative; max-width: 420px; width: 100%; justify-self: center; }
-.hero-photo img { width: 100%; aspect-ratio: 4/5; object-fit: cover; object-position: 50% 30%; border-radius: 4px; filter: saturate(.9); box-shadow: var(--shadow); }
-.hero-photo::before { content: ""; position: absolute; inset: 14px -14px -14px 14px; border: 1px solid var(--ink-3); border-radius: 4px; z-index: -1; }
-.hero-photo figcaption { display: flex; justify-content: space-between; margin-top: 22px; font-family: var(--mono); font-size: .75rem; color: var(--ink-3); letter-spacing: .06em; }
 
 /* ===== 숫자 띠 ===== */
 .stats { display: grid; grid-template-columns: repeat(2, 1fr); border-top: 1px solid var(--ink); border-bottom: 1px solid var(--rule); }
@@ -232,7 +220,28 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .reveal { opacity: 0; transform: translateY(14px); transition: opacity .7s ease, transform .7s ease; }
 .reveal.in { opacity: 1; transform: none; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .reveal { opacity: 1; transform: none; } }
-@media (max-width: 879px) {
-  .hero-photo { max-width: 340px; justify-self: start; }
-  .hero-photo img { aspect-ratio: 1/1; }
-}
+
+/* ===== 히어로 목차 ===== */
+.toc { width: 100%; border-top: 1px solid var(--ink); }
+.toc-head { display: flex; justify-content: space-between; align-items: baseline; padding: 12px 0; font-size: .85rem; font-weight: 600; color: var(--ink-2); border-bottom: 1px solid var(--rule); }
+.toc-head .mono { font-weight: 400; color: var(--ink-3); }
+.toc a { display: grid; grid-template-columns: 2.6em 1fr auto; align-items: baseline; gap: 8px; padding: 14px 0; border-bottom: 1px solid var(--rule); text-decoration: none; font-family: var(--serif); font-weight: 700; font-size: 1.05rem; transition: color .15s ease, padding .15s ease; }
+.toc a .mono { color: var(--accent); font-family: var(--mono); font-weight: 400; font-size: .75rem; }
+.toc a em { font-style: normal; font-family: var(--sans); font-weight: 500; font-size: .78rem; color: var(--ink-3); }
+.toc a:hover { color: var(--accent); padding-left: 6px; }
+
+/* ===== 히어로: 반도체 칩 그래픽 ===== */
+.hero-band { position: relative; border-bottom: 1px solid var(--rule); overflow: hidden; }
+.hero-band::before { content: ""; position: absolute; inset: 0; background-image: linear-gradient(var(--rule) 1px, transparent 1px), linear-gradient(90deg, var(--rule) 1px, transparent 1px); background-size: 48px 48px; opacity: .35; mask-image: linear-gradient(180deg, #000 0%, transparent 85%); -webkit-mask-image: linear-gradient(180deg, #000 0%, transparent 85%); pointer-events: none; }
+.hero { position: relative; }
+.hero-chip { position: relative; width: 100%; max-width: 520px; justify-self: center; border: 1px solid var(--rule); background: var(--paper); }
+.hero-chip canvas { display: block; width: 100%; aspect-ratio: 1 / 1; }
+.hero-chip figcaption { display: flex; justify-content: space-between; padding: 10px 12px; border-top: 1px solid var(--rule); font-size: .68rem; letter-spacing: .1em; color: var(--ink-3); }
+.hero-chip::before, .hero-chip::after { content: ""; position: absolute; width: 10px; height: 10px; border-color: var(--accent); border-style: solid; }
+.hero-chip::before { top: -1px; left: -1px; border-width: 1px 0 0 1px; }
+.hero-chip::after { bottom: -1px; right: -1px; border-width: 0 1px 1px 0; }
+.stats { margin-top: 0; border-top: 0; }
+.wrap > .stats { margin-top: 40px; border-top: 1px solid var(--ink-3); }
+.feature-body h3, .card h3, .sec-head h2, .steps h3, .stats dt, .facts b, .toc a, .mail, .edu b { letter-spacing: -0.035em; }
+.q { font-family: var(--sans); font-weight: 600; }
+.hero-photo, .toc { display: none; }

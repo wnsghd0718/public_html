@@ -59,10 +59,9 @@
   // 4) 밝게/어둡게
   const root = document.documentElement;
   document.getElementById("themeBtn").addEventListener("click", () => {
-    const dark = root.dataset.theme
-      ? root.dataset.theme === "dark"
-      : matchMedia("(prefers-color-scheme: dark)").matches;
+    const dark = root.dataset.theme !== "light";
     root.dataset.theme = dark ? "light" : "dark";
+    document.dispatchEvent(new Event("themechange"));
     try { localStorage.setItem("theme", root.dataset.theme); } catch (e) {}
   });
 
